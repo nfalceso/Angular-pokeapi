@@ -6,6 +6,7 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PokemonDetailsComponent,
     PokemonSearchComponent,
     PokemonComponent,
-    DashboardComponent
+    DashboardComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule
