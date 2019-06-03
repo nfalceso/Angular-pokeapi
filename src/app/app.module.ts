@@ -7,6 +7,8 @@ import { PokemonSearchComponent } from './pokemon-search/pokemon-search.componen
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { HeaderComponent } from './header/header.component';
+import { BerriesComponent } from './berries/berries.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
     PokemonSearchComponent,
     PokemonComponent,
     DashboardComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    HeaderComponent,
+    BerriesComponent
   ],
   imports: [
     BrowserModule
