@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MdMenuModule, MdButtonModule, MdIconModule, MdCardModule } from '@angular/material'
+// import { MdMenuModule, MdButtonModule, MdIconModule, MdCardModule } from '@angular/material'
+import { NgxNavDrawerModule } from '@ngx-lite/nav-drawer';
+import { NgxModalModule } from '@ngx-lite/modal';
 
 import { AppComponent } from './app.component';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
@@ -24,11 +26,11 @@ import { BerriesComponent } from './berries/berries.component';
     BerriesComponent
   ],
   imports: [
-    BrowserModule,
-    MdMenuModule,
-    MdButtonModule,
-    MdIconModule,
-    MdCardModule
+    BrowserModule
+    // MdMenuModule,
+    // MdButtonModule,
+    // MdIconModule,
+    // MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
