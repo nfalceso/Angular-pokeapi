@@ -1,0 +1,13 @@
+.cells{
+    padding: 0%;
+    border: solid red 1px;
+    text-align: center;
+    font-family: "Calibri", Arial, monospace;
+}
+
+.grid{
+    padding: 0%;
+    border: solid black 1px;
+    text-align: center;
+    font-family: "Calibri", Arial, monospace;
+}

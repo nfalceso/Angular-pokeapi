@@ -4,6 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 
 //Modules
 
+//Class
+import { Pokemon } from '../pokemon';
+import { Service } from '../service';
 
 @Component({
   selector: 'app-pokemon',
@@ -12,9 +15,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PokemonComponent implements OnInit {
 
-  constructor() { }
+  pokemons: Pokemon;
+  constructor(
+    protected service: Service) { }
 
   ngOnInit() {
+    this.service.getPokemon()
+    .subscribe((data: Pokemon) => console.log(this.pokemons = data))
   }
 
 }
