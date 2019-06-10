@@ -1,4 +1,9 @@
+//Angular  Resources
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+//Modules
+
 
 @Component({
   selector: 'app-pokemon',
