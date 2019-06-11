@@ -1,13 +1,22 @@
-.cells{
+.list-yeah{
     padding: 0%;
-    border: solid blue 1px;
-    text-align: center;
-    font-family: "Calibri", Arial, monospace;
+    border: 0%;
+    margin: 0%;
+    width: 100%;
 }
 
-.grid{
+.cells{
+    padding: 5%;
+    border: solid blue 1px;
+    text-align: center;
+    font: Arial;
+    width: 30%;
+}
+
+/* .grid{
     padding: 0%;
     border: solid black 1px;
     text-align: center;
     font-family: "Calibri", Arial, monospace;
-}
+    width: 100%;
+} */

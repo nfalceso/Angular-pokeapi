@@ -1,13 +1,14 @@
 export class Pokemon {
-    id: number;
     name: string;
     url: string;
+    base_experience: string;
 }
 
 export class PokemonList {
     count: number;
     next: string;
     results: Array;
+    
     constructor (
         count: number,
         next: string,
@@ -22,13 +23,15 @@ export class PokemonList {
 export class Array {
     name: string;
     url: string;
+    base_experience: string;
 
     constructor (
         name: string,
-        url: string
+        url: string,
+        base_experience: string
     ) {
         this.name = name;
         this.url = url;
-
+        this.base_experience = base_experience;
     }
 }

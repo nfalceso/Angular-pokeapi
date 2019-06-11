@@ -13,15 +13,15 @@ export class Service{
     private URL="https://pokeapi.co/api/v2";
 
     constructor(
-        private http: HttpClient) { }
+      private http: HttpClient) { }
 
-    pokemon: Pokemon;
+    pokemon: PokemonList;
 
     getPokemon(){
-        return this.http.get<Pokemon>(`${this.URL}/pokemon`);
+      return this.http.get<PokemonList>(`${this.URL}/pokemon`);
     }
     
-    getDetails(id: string){
-        return this.http.get<Pokemon>(`${this.URL}/pokemon/${id}`);
-      }
+    getDetails(name: string){
+      return this.http.get<PokemonList>(`${this.URL}/pokemon/${name}`);
+    }
 }

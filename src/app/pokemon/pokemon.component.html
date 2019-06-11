@@ -1,10 +1,11 @@
-<div class="list-yeah">
-  <div class="grid" *ngIf="pokemonList">
-    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index" [attr.data-index]="x" routerLink="">
-      <p>{{ p.name }}</p>
-      <p>{{ p.url }}</p>
-		</div>
-  </div>
+<div class="list-yeah" *ngIf="pokemonList">
+  <!-- <div class="grid" *ngIf="pokemonList"> -->
+    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index"  >
+        <!-- <img src="{{pokemon.sprites.front_default}}" alt="sprite"> -->
+      {{ p.name }}
+      {{ p.id }}
+		<!-- </div> -->
+    </div>
 </div>
 
 <!-- <div *ngIf="pokemon" class="list-yeah">
