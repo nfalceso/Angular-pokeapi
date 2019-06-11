@@ -1,7 +1,8 @@
 <div class="list-yeah">
-  <div class="grid" *ngIf="pokemon">
-    <div class="cells" *ngFor="let pokemon of pokemon">
-		  <p>{{ pokemon.name }}</p>
+  <div class="grid" *ngIf="pokemonList">
+    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index" [attr.data-index]="x" routerLink="">
+      <p>{{ p.name }}</p>
+      <p>{{ p.url }}</p>
 		</div>
   </div>
 </div>

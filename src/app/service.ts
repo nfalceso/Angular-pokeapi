@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 
-import { Pokemon } from './pokemon';
+import { PokemonList, Pokemon } from './pokemon';
 
 @Injectable({
   providedIn: 'root'

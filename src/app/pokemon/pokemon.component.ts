@@ -5,7 +5,9 @@ import { ActivatedRoute } from '@angular/router';
 //Modules
 
 //Class
-import { Pokemon } from '../pokemon';
+import { PokemonList, Pokemon } from '../pokemon';
+
+//Service
 import { Service } from '../service';
 
 @Component({
@@ -15,13 +17,19 @@ import { Service } from '../service';
 })
 export class PokemonComponent implements OnInit {
 
-  pokemons: Pokemon;
+  pokemon: any;
+  pokemonList: PokemonList;
+
   constructor(
     protected service: Service) { }
 
   ngOnInit() {
     this.service.getPokemon()
-    .subscribe((data: Pokemon) => console.log(this.pokemons = data))
+    .subscribe((data: Pokemon) => console.log(this.pokemonList = {
+      count: data['count'],
+      next: data['next'],
+      results: data['results']
+    }))
   }
 
 }
