@@ -11,6 +11,12 @@ header{
     background-position: 50%;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .Menu{
     padding: 0px;
     border: 0px;

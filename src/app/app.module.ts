@@ -9,6 +9,7 @@ import { PokemonSearchComponent } from './pokemon-search/pokemon-search.componen
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     PokemonDetailsComponent,
     PokemonSearchComponent,
     PokemonComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 export class Pokemon {
     name: string;
     url: string;
-    base_experience: string;
+    // base_experience: string;
 }
 
 export class PokemonList {
@@ -23,15 +23,15 @@ export class PokemonList {
 export class Array {
     name: string;
     url: string;
-    base_experience: string;
+    // base_experience: string;
 
     constructor (
         name: string,
-        url: string,
-        base_experience: string
+        url: string
+        // base_experience: string
     ) {
         this.name = name;
         this.url = url;
-        this.base_experience = base_experience;
+        // this.base_experience = base_experience;
     }
 }

@@ -1,11 +1,10 @@
-<div class="list-yeah" *ngIf="pokemonList">
-  <!-- <div class="grid" *ngIf="pokemonList"> -->
+<div class="list">
+  <div class="table" *ngIf="pokemonList">
     <div class="cells" *ngFor="let p of pokemonList.results ; let x = index"  >
-        <!-- <img src="{{pokemon.sprites.front_default}}" alt="sprite"> -->
-      {{ p.name }}
-      {{ p.id }}
-		<!-- </div> -->
-    </div>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{x+1}}.png" alt="sprite">
+      <p>{{ p.name }}</p>
+		</div>
+  </div>
 </div>
 
 <!-- <div *ngIf="pokemon" class="list-yeah">

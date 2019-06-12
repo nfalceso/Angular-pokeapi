@@ -18,7 +18,7 @@ export class Service{
     pokemon: PokemonList;
 
     getPokemon(){
-      return this.http.get<PokemonList>(`${this.URL}/pokemon`);
+      return this.http.get<PokemonList>(`${this.URL}/pokemon?offset=0&limit=60`);
     }
     
     getDetails(name: string){
