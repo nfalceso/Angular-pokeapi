@@ -21,19 +21,25 @@ export class PokemonComponent implements OnInit {
   pokemonList: PokemonList;
   sub: any;
   id: string;
+  page = 1;
 
   constructor(
-    protected service: Service) { }
+    protected service: Service,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    // this.sub = this.route.params.subscribe(params => { this.page = +params["page"];
+    // console.log("page: " + this.page)
+    
     this.service.getPokemon()
     .subscribe((data: PokemonList) => console.log(this.pokemonList = {
       count: data['count'],
       next: data['next'],
       results: data['results']
     }))
-    // this.service.getDetails(this.id)
-    // .subscribe((data: PokemonList) => console.log(this.pokemonList = data))
-  }
-
+  //   this.service.getDetails(this.id)
+  //   .subscribe((data: PokemonList) => console.log(this.pokemonList = data))
+  // });
+}
 }

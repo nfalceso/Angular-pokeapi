@@ -1,6 +1,15 @@
+<div class="search">
+  <form class="form-inline waves-light" mdbWavesEffect>
+    <div class="md-form mt-0">
+      <input id="search-box" type="text" placeholder="Search Pokemon">
+      <button button class="search-button">GO!</button>
+    </div>
+  </form>
+</div>
+
 <div class="list">
   <div class="table" *ngIf="pokemonList">
-    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index"  >
+    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index" [routerLink]="['/pokemon-details', p.name]" >
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{x+1}}.png" alt="sprite">
       <p>{{ p.name }}</p>
 		</div>
