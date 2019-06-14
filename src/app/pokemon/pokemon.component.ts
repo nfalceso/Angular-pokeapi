@@ -41,5 +41,9 @@ export class PokemonComponent implements OnInit {
   //   this.service.getDetails(this.id)
   //   .subscribe((data: PokemonList) => console.log(this.pokemonList = data))
   // });
-}
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }
