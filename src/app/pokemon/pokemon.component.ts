@@ -43,7 +43,7 @@ export class PokemonComponent implements OnInit {
   // });
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
+  // ngOnDestroy() {
+  //   this.sub.unsubscribe();
+  // }
 }

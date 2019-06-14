@@ -15,7 +15,7 @@ import { Service } from '../service';
 export class PokemonDetailsComponent implements OnInit {
 
   // pokemon: any;
-  pokemonList: PokemonList;
+  pokemon: Pokemon;
   sub: any;
   name: string;
 
@@ -26,11 +26,11 @@ export class PokemonDetailsComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => { this.name = params["name"];
     this.service.getDetails(this.name)
-    .subscribe((data: PokemonList) => console.log(this.pokemonList = data));
+    .subscribe((data: Pokemon) => console.log(this.pokemon = data));
    });
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
+  // ngOnDestroy() {
+  //   this.sub.unsubscribe();
+  // }
 }

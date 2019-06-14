@@ -1,8 +1,28 @@
-export class Pokemon {
+// export class Pokemon {
+//     name: string;
+//     url: string;
+//     // base_experience: string;
+// }
+
+export interface Pokemon {
+    id: number;
     name: string;
-    url: string;
-    // base_experience: string;
-}
+    description: string;
+    url?: string;
+    base_experience?: number;
+    height?: number;
+    is_default?: boolean;
+    order?: number;
+    weight?: number;
+    // abilities?: Ability[];
+    // moves?: Move[];
+    // stats?: Stat[];
+    // types?: Type[];
+    species?: {
+      name: string;
+      url: string;
+    };
+  }
 
 export class PokemonList {
     count: number;
