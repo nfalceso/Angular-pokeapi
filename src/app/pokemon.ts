@@ -1,10 +1,15 @@
 // export class Pokemon {
 //     name: string;
 //     url: string;
-//     // base_experience: string;
 // }
 
 export interface Pokemon {
+  }
+
+export class PokemonList {
+    count: number;
+    next: string;
+    results: Array;
     id: number;
     name: string;
     description: string;
@@ -14,20 +19,15 @@ export interface Pokemon {
     is_default?: boolean;
     order?: number;
     weight?: number;
+    front_default?: string;
     // abilities?: Ability[];
     // moves?: Move[];
     // stats?: Stat[];
-    // types?: Type[];
+    types?: Type[];
     species?: {
       name: string;
       url: string;
     };
-  }
-
-export class PokemonList {
-    count: number;
-    next: string;
-    results: Array;
     
     constructor (
         count: number,
@@ -39,6 +39,15 @@ export class PokemonList {
         this.results = results
     }
 }
+
+
+export interface Type {
+    slot: number;
+    type: {
+      name: string;
+      url: string;
+    };
+  }
 
 export class Array {
     name: string;

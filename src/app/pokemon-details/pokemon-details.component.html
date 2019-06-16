@@ -1,7 +1,15 @@
 <div class="details" *ngIf="pokemon">
   <!-- <div *ngFor="let p of Pokemon.results"> -->
-  <p>
-      {{pokemon.id}}
-  </p>
+    <table>
+      <thead>
+          <div *ngFor="let type of pokemon.types" class="type" [ngClass]="type">
+              {{type.type.name}}
+          </div>
+          <p>
+              {{pokemon.id}}
+              {{pokemon.name}}
+          </p>
+      </thead>
+    </table>
   <!-- </div> -->
 </div>
