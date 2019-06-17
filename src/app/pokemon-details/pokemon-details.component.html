@@ -1,15 +1,25 @@
 <div class="details" *ngIf="pokemon">
   <!-- <div *ngFor="let p of Pokemon.results"> -->
     <table>
-      <thead>
-          <div *ngFor="let type of pokemon.types" class="type" [ngClass]="type">
-              {{type.type.name}}
+      <tr>
+        <td>
+          <div class="sprite">
+              <img src="{{pokemon.sprites.front_default}}" alt="Sprites">
           </div>
-          <p>
-              {{pokemon.id}}
-              {{pokemon.name}}
-          </p>
-      </thead>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">
+          {{pokemon.name | uppercase}}  #{{pokemon.id}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div *ngFor="let type of pokemon.types" class="type" [ngClass]="type">
+            {{type.type.name}}
+          </div>
+        </td>
+      </tr>
     </table>
   <!-- </div> -->
 </div>

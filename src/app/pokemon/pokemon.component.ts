@@ -38,8 +38,8 @@ export class PokemonComponent implements OnInit {
       next: data['next'],
       results: data['results']
     }))
-  //   this.service.getDetails(this.id)
-  //   .subscribe((data: PokemonList) => console.log(this.pokemonList = data))
+    this.service.getDetails(this.id)
+    .subscribe((data: PokemonList) => console.log(this.pokemonList = data))
   // });
   }
 

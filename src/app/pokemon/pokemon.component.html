@@ -11,7 +11,7 @@
   <div class="table" *ngIf="pokemonList">
     <div class="cells" *ngFor="let p of pokemonList.results ; let x = index" [routerLink]="['/pokemon-details', p.name]" >
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{x+1}}.png" alt="Sprite">
-      <p>{{ p.name }}</p>
+      {{ p.name }}
 		</div>
   </div>
 </div>

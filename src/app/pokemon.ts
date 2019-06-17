@@ -4,25 +4,6 @@
 // }
 
 export interface Pokemon {
-    // name: string;
-    // description: string;
-    // url?: string;
-    // base_experience?: number;
-    // height?: number;
-    // is_default?: boolean;
-    // order?: number;
-    // weight?: number;
-    // species?: {
-    //   name: string;
-    //   url: string;
-    // };
-  }
-
-export class PokemonList {
-    count: number;
-    next: string;
-    results: Array;
-    id: number;
     name: string;
     description: string;
     url?: string;
@@ -35,10 +16,29 @@ export class PokemonList {
       name: string;
       url: string;
     };
+  }
+
+export class PokemonList {
+    count: number;
+    next: string;
+    results: Array;
+    // id: number;
+    // name: string;
+    // description: string;
+    // url?: string;
+    // base_experience?: number;
+    // height?: number;
+    // is_default?: boolean;
+    // order?: number;
+    // weight?: number;
+    // species?: {
+    //   name: string;
+    //   url: string;
+    // };
+    // types?: Type[];
     // abilities?: Ability[];
     // moves?: Move[];
     // stats?: Stat[];
-    // types?: Type[];
     
     constructor (
         count: number,
