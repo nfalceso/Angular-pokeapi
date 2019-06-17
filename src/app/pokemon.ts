@@ -4,6 +4,18 @@
 // }
 
 export interface Pokemon {
+    // name: string;
+    // description: string;
+    // url?: string;
+    // base_experience?: number;
+    // height?: number;
+    // is_default?: boolean;
+    // order?: number;
+    // weight?: number;
+    // species?: {
+    //   name: string;
+    //   url: string;
+    // };
   }
 
 export class PokemonList {
@@ -19,15 +31,14 @@ export class PokemonList {
     is_default?: boolean;
     order?: number;
     weight?: number;
-    front_default?: string;
-    // abilities?: Ability[];
-    // moves?: Move[];
-    // stats?: Stat[];
-    types?: Type[];
     species?: {
       name: string;
       url: string;
     };
+    // abilities?: Ability[];
+    // moves?: Move[];
+    // stats?: Stat[];
+    // types?: Type[];
     
     constructor (
         count: number,
