@@ -14,7 +14,6 @@ import { Service } from '../service';
 })
 export class PokemonDetailsComponent implements OnInit {
 
-  // pokemon: any;
   pokemon: Pokemon;
   sub: any;
   name: string;
@@ -30,7 +29,7 @@ export class PokemonDetailsComponent implements OnInit {
    });
   }
 
-  // ngOnDestroy() {
-  //   this.sub.unsubscribe();
-  // }
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }

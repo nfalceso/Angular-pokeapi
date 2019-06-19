@@ -14,12 +14,15 @@
         </td>
       </tr>
       <tr>
-        <td>
-          <div *ngFor="let type of pokemon.types" class="type" [ngClass]="type">
+        <td class="pokemon-type">
+          <div *ngFor="let type of pokemon.types" class="type">
             {{type.type.name}}
           </div>
         </td>
       </tr>
     </table>
   <!-- </div> -->
+  <div class="Return">
+    <button button class="Return-button">RETURN!</button>
+  </div>
 </div>

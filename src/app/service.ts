@@ -22,6 +22,10 @@ export class Service{
     }
     
     getDetails(name: string){
-      return this.http.get<PokemonList>(`${this.URL}/pokemon/${name}`);
+      return this.http.get<Pokemon>(`${this.URL}/pokemon/${name}`);
+    }
+    
+    getOnlyPokemon(){
+      return this.http.get<Pokemon>(`${this.URL}/pokemon-search/${name}`);
     }
 }

@@ -31,7 +31,6 @@ header{
 
 h2{
     margin-left: 0%;
-    /* margin-right: auto; */
     margin-top: 0%;
     margin-bottom: 0%;
     max-width: 70%;
@@ -42,7 +41,7 @@ h2{
 }
 
 ul{
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     margin: 0%;

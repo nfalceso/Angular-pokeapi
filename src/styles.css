@@ -4,14 +4,13 @@ html {
     width: 100%;
 }
 
-.list-pokemon{
+/* .list-pokemon{
     padding: 0%;
     margin: 0%;
     height: 89%;
     border: solid red 1px;
     width: 100%;
-
-}
+} */
 
 /* header{
     width: 100%;
@@ -46,13 +45,13 @@ h2{
     text-align: center;
 } */
 
-ul{
-    position: -webkit-sticky; /* Safari */
+/* ul{
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     margin: 0%;
     padding: 0%;
-}
+} */
 
 
 
@@ -79,7 +78,7 @@ h1{
 } */
 
 body {
-    height: 100%;
+    height: 80%;
     width: 100%;
     margin: 0%;
     padding: 0%;
