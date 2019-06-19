@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 //Class
-import { PokemonList, Pokemon } from '../pokemon';
+import { PokemonList, Pokemon, Desc } from '../pokemon';
 
 //Service
 import { Service } from '../service';
@@ -15,6 +15,7 @@ import { Service } from '../service';
 export class PokemonDetailsComponent implements OnInit {
 
   pokemon: Pokemon;
+  desc: Desc;
   sub: any;
   name: string;
 
@@ -26,8 +27,20 @@ export class PokemonDetailsComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => { this.name = params["name"];
     this.service.getDetails(this.name)
     .subscribe((data: Pokemon) => console.log(this.pokemon = data));
+    this.sub = this.route.params.subscribe(params => { this.name = params["name"];
+    this.service.getDescription(this.name)
+      .subscribe((data: Desc) => console.log(this.desc = data));
+     });
    });
+  //  ngGetDescription();
   }
+
+  // ngGetDescription(){
+  //   this.sub = this.route.params.subscribe(params => { this.name = params["name"];
+  //   this.service.getDetails(this.name)
+  //   .subscribe((data: Pokemon) => console.log(this.pokemon = data));
+  //  });
+  // }
 
   ngOnDestroy() {
     this.sub.unsubscribe();

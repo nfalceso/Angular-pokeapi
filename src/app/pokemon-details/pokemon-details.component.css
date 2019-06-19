@@ -1,5 +1,7 @@
 td{
-  width: 50%;
+  text-align: center;
+  font-family: Arial;
+  font-size: 18px;
 }
 
 img{
@@ -10,27 +12,38 @@ img{
     border: 0%;
 }
 
-.details{
+.primary-details{
     width: 100%;
     height: 100%;
     margin-top: 100px;
 }
 
-table{
-    /* padding: auto; */
-    margin: auto;
-    width: 80%;
-    background-color:darkturquoise;
-    border: solid darkblue 5px;
+.details{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
 }
 
-/* thead{
-} */
+table{
+  background-color:darkturquoise;
+  border: solid darkblue 5px;
 
+}
+.main{
+  margin: auto;
+  width: 85%;
+}
+
+.primary-info{
+  margin: 0%;
+  width: 100%;
+}
 
 p{
-    text-align: center;
-    font-style: Arial;
+  padding: 0%;
+  margin: 0%;
+  border: 0%;
+  font-family: Arial;
 }
 
 .title{
@@ -38,8 +51,6 @@ p{
     margin: 0%;
     border: 0%;
     text-align: center;
-    font-family: Arial;
-    font-size: 20px;
 }
 
 .sprite{
@@ -56,8 +67,6 @@ p{
 .type{
     padding: 0%;
     border: 0%;
-    font-family: Arial;
-    font-size: 20px;
     display: inline;
     padding: 4px 10px;
     /* color: $color-white; */
@@ -82,74 +91,11 @@ p{
   cursor: pointer;
 }
 
-/* .type {
-  } */
-  
-  .fire {
-    background-color: #F45545;
-  }
-  
-  .water {
-    background-color: #558BCF;
-  }
-  
-  .grass {
-    background-color: #589F43;
-  }
-  
-  .poison {
-    background-color: #6c4294;
-  }
-  
-  .flying {
-    background-color: #E3C066;
-  }
-  
-  .normal {
-    background-color: #bd8d41;
-  }
-  
-  .bug {
-    background-color: #acbe16;
-  }
-  
-  .electric {
-    background-color: #F3BE1F;
-  }
-  
-  .ground {
-    background-color: #796444;
-  }
-  
-  .dragon {
-    background-color: #A485C2;
-  }
-  
-  .psychic {
-    background-color: #EE86A5;
-  }
-  
-  .fairy {
-    background-color: #BF6481;
-  }
-  
-  .ice {
-    background-color: #64AFF5;
-  }
-  
-  .rock {
-    background-color: #3B3426;
-  }
-  
-  .fighting {
-    background-color: #915656;
-  }
-  
-  .steel {
-    background-color: #949494;
-  }
-  
-  .ghost {
-    background-color: #75577D;
-  }
-
+.others{
+  padding: 0%;
+  background-color:darkturquoise;
+  border: solid darkblue 5px;
+  margin: auto;
+  width: 85%;
+  text-align: left;
+}

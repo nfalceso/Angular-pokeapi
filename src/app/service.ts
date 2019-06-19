@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 
-import { PokemonList, Pokemon } from './pokemon';
+import { PokemonList, Pokemon, Desc } from './pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,10 @@ export class Service{
     }
     
     getOnlyPokemon(){
-      return this.http.get<Pokemon>(`${this.URL}/pokemon-search/${name}`);
+      return this.http.get<Pokemon>(`${this.URL}/pokemon/${name}`);
+    }
+
+    getDescription(name: string){
+      return this.http.get<Desc>(`${this.URL}/pokemon-species/${name}`);
     }
 }

@@ -1,16 +1,18 @@
-<div class="details" *ngIf="pokemon">
+<div class="primary-details" *ngIf="pokemon">
   <!-- <div *ngFor="let p of Pokemon.results"> -->
-    <table>
+    <table class="main">
       <tr>
         <td>
           <div class="sprite">
               <img src="{{pokemon.sprites.front_default}}" alt="Sprites">
           </div>
         </td>
-      </tr>
+      <!-- </tr> -->
+      <table class="primary-info">
       <tr>
         <td class="title">
-          {{pokemon.name | uppercase}}  #{{pokemon.id}}
+          ID# {{pokemon.id}}<br>
+          {{pokemon.name | uppercase}}
         </td>
       </tr>
       <tr>
@@ -20,9 +22,61 @@
           </div>
         </td>
       </tr>
+      <tr>
+        <td class="pokemon-type">
+          <div class="type">
+            {{pokemon.species.name}}
+          </div>
+        </td>
+      </tr>
+      <tr class="height">
+        <td>
+          Height: {{pokemon.height * 10}} cm.<br>
+          Weight: {{pokemon.weight * 100}} g.
+        </td>
+      </tr>
+      <tr>
+        <td>Abilities :
+          <div *ngFor="let ability of pokemon.abilities" class="type">
+            {{ability.ability.name}}
+          </div>
+        </td>
+      </tr>
+      </table>
+      </tr>
     </table>
-  <!-- </div> -->
-  <div class="Return">
-    <button button class="Return-button">RETURN!</button>
+</div>
+
+<div class="details" *ngIf="desc">
+  <div class="others">
+    <p><b>DESCRIPTION</b></p>
+    <p>{{desc.flavor_text_entries[1].flavor_text}}</p>
+    <p>{{desc.form_descriptions[0].description}}</p>
   </div>
+</div>
+
+<div class="details" *ngIf="pokemon">
+  <div class="others">
+    <p><b>MOVE LIST:</b></p>
+    <select>
+      <option *ngFor="let move of pokemon.moves" value="{{move.move.name}}">{{move.move.name}}</option>
+      <!-- <div *ngFor="let move of pokemon.moves" class="type">
+        {{move.move.name}}<br>
+      </div> -->
+    </select>
+    <!-- <div *ngFor="let move of pokemon.moves" class="type">
+      {{move.move.name}}<br>
+    </div> -->
+  </div>
+  
+  <!-- <div>
+    <accordion>
+      oi
+    </accordion>
+  </div> -->
+
+</div>
+
+<div class="Return">
+  <button button class="Return-button" [routerLink]="['/pokemon']">RETURN!</button>
 </div>

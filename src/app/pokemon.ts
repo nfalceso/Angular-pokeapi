@@ -53,12 +53,12 @@ export class PokemonList {
 
 
 export interface Type {
-    slot: number;
-    type: {
-      name: string;
-      url: string;
-    };
-  }
+  slot: number;
+  type: {
+    name: string;
+    url: string;
+  };
+}
 
 export class Array {
     name: string;
@@ -71,4 +71,8 @@ export class Array {
         this.name = name;
         this.url = url;
     }
+}
+
+export interface Desc {
+  name: string;
 }
