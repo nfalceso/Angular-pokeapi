@@ -11,32 +11,34 @@
       <table class="primary-info">
       <tr>
         <td class="title">
-          ID# {{pokemon.id}}<br>
-          {{pokemon.name | uppercase}}
+          <b>ID No.</b> {{pokemon.id}}<br>
+          <b>Name:</b> {{pokemon.name | uppercase}}
         </td>
       </tr>
       <tr>
-        <td class="pokemon-type">
+        <td>
+          <b>Type:</b> 
           <div *ngFor="let type of pokemon.types" class="type">
             {{type.type.name}}
           </div>
         </td>
       </tr>
       <tr>
-        <td class="pokemon-type">
+        <td>
           <div class="type">
-            {{pokemon.species.name}}
+            <b>Species:</b> {{pokemon.species.name}}
           </div>
         </td>
       </tr>
       <tr class="height">
         <td>
-          Height: {{pokemon.height * 10}} cm.<br>
-          Weight: {{pokemon.weight * 100}} g.
+          <b>Height:</b> {{pokemon.height / 10}} meter/s<br>
+          <b>Weight:</b> {{pokemon.weight / 10}} kilogram/s
         </td>
       </tr>
       <tr>
-        <td>Abilities :
+        <td>
+          <b>Abilities:</b>
           <div *ngFor="let ability of pokemon.abilities" class="type">
             {{ability.ability.name}}
           </div>
@@ -49,9 +51,11 @@
 
 <div class="details" *ngIf="desc">
   <div class="others">
-    <p><b>DESCRIPTION</b></p>
-    <p>{{desc.flavor_text_entries[1].flavor_text}}</p>
-    <p>{{desc.form_descriptions[0].description}}</p>
+    <p><b>ADDITIONAL INFORMATION:</b></p><br>
+    <p><b>Description:</b></p>
+    <p>{{desc.flavor_text_entries[1].flavor_text}}</p><br>
+    <p><b>Genus:</b> {{desc.genera[2].genus}}</p><br>
+    <p><b>Shape:</b> {{desc.shape.name}}</p>
   </div>
 </div>
 
