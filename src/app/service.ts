@@ -18,14 +18,22 @@ export class Service{
     pokemon: PokemonList;
 
     getPokemon(){
-      return this.http.get<PokemonList>(`${this.URL}/pokemon?offset=0&limit=60`);
+      return this.http.get<PokemonList>(`${this.URL}/pokemon?offset=0&limit=100`);
     }
+    
+    getAllPokemon(){
+      return this.http.get<PokemonList>(`${this.URL}/pokemon?offset=0&limit=9999`);
+    }
+
+    // getPage(){
+
+    // }
     
     getDetails(name: string){
       return this.http.get<Pokemon>(`${this.URL}/pokemon/${name}`);
     }
     
-    getOnlyPokemon(){
+    getOnlyPokemon(name: string){
       return this.http.get<Pokemon>(`${this.URL}/pokemon/${name}`);
     }
 

@@ -9,6 +9,7 @@ import { PokemonList, Pokemon } from '../pokemon';
 
 //Service
 import { Service } from '../service';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-pokemon',
@@ -20,8 +21,8 @@ export class PokemonComponent implements OnInit {
   pokemon: any;
   pokemonList: PokemonList;
   sub: any;
-  id: string;
-  page = 1;
+  // id: string;
+  pagedItems: any[];
 
   constructor(
     protected service: Service,
@@ -32,11 +33,16 @@ export class PokemonComponent implements OnInit {
     // this.sub = this.route.params.subscribe(params => { this.page = +params["page"];
     // console.log("page: " + this.page)
     
-    this.service.getPokemon()
+    this.service.getAllPokemon()
     .subscribe((data: PokemonList) => console.log(this.pokemonList = {
       count: data['count'],
       next: data['next'],
       results: data['results']
     }))
+    
   }
+
+  // clickPage() {
+  //   this.service.getOnlyPokemon(name)
+  // }
 }

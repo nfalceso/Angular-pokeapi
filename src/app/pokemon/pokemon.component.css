@@ -5,8 +5,7 @@
     top: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 5px;
+    margin-top: 45px;
     max-width: 100%;
     padding: 0px;
     border: 0px;
@@ -33,7 +32,8 @@ input#search-box {
 }
 
 .list{
-    margin-top: 150px;
+    margin-top: 90px;
+    margin-bottom: 45px;
     border: 0%;
     padding: 0%;
     width: 100%;
@@ -77,4 +77,26 @@ img{
     margin: 0%;
     height: 75%;
     width: 75%;
+}
+
+.page-main{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 40px;
+    background-color: darkred;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page-info{
+    margin-top: 3px;
+    font-family: Arial;
+}
+
+select{
+    font-size: 20px;
+    /* margin: 5px; */
+    border: solid blue 2px;
 }

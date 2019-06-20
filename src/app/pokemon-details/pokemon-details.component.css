@@ -20,6 +20,26 @@ img{
     margin-top: 100px;
 }
 
+.previous{
+  position: fixed;
+  left: 0%;
+  height: 25%;
+  width: 20%;
+  cursor: pointer;
+  background-size: 100% 100%;
+  background-image: url('img/previous.jpeg');
+}
+
+.next{
+  position: fixed;
+  right: 0%;
+  height: 25%;
+  width: 20%;
+  cursor: pointer;
+  background-size: 100% 100%;
+  background-image: url('img/next.jpeg');
+}
+
 .details{
     width: 100%;
     height: 100%;
@@ -64,17 +84,24 @@ p{
     margin: auto;
 }
 
+
 /* .pokemon-type{
   margin: auto;
   text-align: center;
 } */
 
-.type{
+/* .type{
+  margin: 20px;
+  border: 0%;
+  padding: 0%;
+  width: 100px;
+} */
+
+.species{
     padding: 0%;
     border: 0%;
-    display: inline;
     padding: 0%;
-    /* color: $color-white; */
+    display: inline;
 }
 
 .Return{
@@ -103,5 +130,97 @@ p{
   margin: auto;
   width: 60%;
   text-align: left;
-  border-radius: 10px;
+  cursor: pointer;    
+}
+
+.heading{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-color: lightblue;
+}
+
+.fire {
+  background-color: #F45545;
+  display: inline;
+}
+
+.water {
+  background-color: #558BCF;
+  display: inline;
+}
+
+.grass {
+  background-color: #589F43;
+  display: inline;
+}
+
+.poison {
+  background-color: #6c4294;
+  display: inline-block;
+}
+
+.flying {
+  background-color: #E3C066;
+  display: inline;
+}
+
+.normal {
+  background-color: #bd8d41;
+  display: inline;
+}
+
+.bug {
+  background-color: #acbe16;
+  display: inline;
+}
+
+.electric {
+  background-color: #F3BE1F;
+  display: inline;
+}
+
+.ground {
+  background-color: #796444;
+  display: inline;
+}
+
+.dragon {
+  background-color: #A485C2;
+  display: inline;
+}
+
+.psychic {
+  background-color: #EE86A5;
+  display: inline;
+}
+
+.fairy {
+  background-color: #BF6481;
+  display: inline;
+}
+
+.ice {
+  background-color: #64AFF5;
+  display: inline;
+}
+
+.rock {
+  background-color: #3B3426;
+  display: inline;
+}
+
+.fighting {
+  background-color: #915656;
+  display: inline;
+}
+
+.steel {
+  background-color: #949494;
+  display: inline;
+}
+
+.ghost {
+  background-color: #75577D;
+  display: inline;
 }

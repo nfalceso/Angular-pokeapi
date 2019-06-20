@@ -18,6 +18,10 @@ export class PokemonDetailsComponent implements OnInit {
   desc: Desc;
   sub: any;
   name: string;
+  default = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png";
+  additionalPanelExpanded = false;
+  statPanelExpanded = false;
+  moveListPanelExpanded = false;
 
   constructor(
     private service: Service,

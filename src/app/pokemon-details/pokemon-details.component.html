@@ -1,10 +1,18 @@
+
 <div class="primary-details" *ngIf="pokemon">
+  <div class="previous"></div>
+  <div class="next"></div>
   <!-- <div *ngFor="let p of Pokemon.results"> -->
     <table class="main">
       <tr>
-        <td>
+        <td class="picture">
           <div class="sprite">
-              <img src="{{pokemon.sprites.front_default}}" alt="Sprites">
+              <!-- <div class="normal"> -->
+                <img src="{{pokemon.sprites.front_default != null && pokemon.sprites.front_default || default}}" alt="Sprite">
+              <!-- </div> -->
+              <!-- <div class="shiny">
+                <img src="{{pokemon.sprites.front_shiny != null && pokemon.sprites.front_shiny || default}}" alt="Sprite">
+              </div> -->
           </div>
         </td>
       <!-- </tr> -->
@@ -18,14 +26,14 @@
       <tr>
         <td>
           <b>Type:</b> 
-          <div *ngFor="let type of pokemon.types" class="type">
-            {{type.type.name}}
+          <div *ngFor="let type of pokemon.types" class="{{type.type.name}}">
+            &nbsp;&nbsp;{{type.type.name}}&nbsp;&nbsp;
           </div>
         </td>
       </tr>
       <tr>
         <td>
-          <div class="type">
+          <div class="species">
             <b>Species:</b> {{pokemon.species.name}}
           </div>
         </td>
@@ -39,7 +47,7 @@
       <tr>
         <td>
           <b>Abilities:</b>
-          <div *ngFor="let ability of pokemon.abilities" class="type">
+          <div *ngFor="let ability of pokemon.abilities" class="species">
             {{ability.ability.name}}
           </div>
         </td>
@@ -49,36 +57,42 @@
     </table>
 </div>
 
-<div class="details" *ngIf="desc">
-  <div class="others">
-    <p><b>ADDITIONAL INFORMATION:</b></p><br>
-    <p><b>Description:</b></p>
-    <p>{{desc.flavor_text_entries[1].flavor_text}}</p><br>
-    <p><b>Genus:</b> {{desc.genera[2].genus}}</p><br>
-    <p><b>Shape:</b> {{desc.shape.name}}</p>
+<div class="details">
+    <div class="others" (click)="statPanelExpanded = !statPanelExpanded">
+        <div class="heading"><b>BASE STATS: (click to expand)</b></div>
+        <div *ngIf="statPanelExpanded">
+          <div *ngFor="let stat of pokemon.stats" class="type">
+            <p><b>{{stat.stat.name}}:</b>&nbsp;{{stat.base_stat}}</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="details">
+  <div class="others" *ngIf="desc" (click)="additionalPanelExpanded = !additionalPanelExpanded">
+  <div class="heading"><b>ADDITIONAL INFORMATION: (click to expand)</b></div>
+    <div *ngIf="additionalPanelExpanded">
+      <!-- <accordion> -->
+      <p><b>Description:</b></p>
+      <p>{{desc.flavor_text_entries[1].flavor_text}}</p><br>
+      <p><b>Genus:</b> {{desc.genera[2].genus}}</p><br>
+      <p><b>Shape:</b> {{desc.shape.name}}</p><br>
+      <!-- <p *ngIf="desc.evolves_from_species.name != null"><b>Evolve's from:</b> {{desc.evolves_from_species.name}}</p> -->
+      <p><b>Habitat:</b> {{desc.habitat.name}}</p>
+      <!-- </accordion> -->
+    </div>
   </div>
 </div>
 
 <div class="details" *ngIf="pokemon">
-  <div class="others">
-    <p><b>MOVE LIST:</b></p>
-    <select>
-      <option *ngFor="let move of pokemon.moves" value="{{move.move.name}}">{{move.move.name}}</option>
-      <!-- <div *ngFor="let move of pokemon.moves" class="type">
-        {{move.move.name}}<br>
-      </div> -->
-    </select>
-    <!-- <div *ngFor="let move of pokemon.moves" class="type">
-      {{move.move.name}}<br>
-    </div> -->
+  <div class="others" (click)="moveListPanelExpanded = !moveListPanelExpanded">
+    <div class="heading"><b>MOVE LIST: (click to expand)</b></div>
+    <div *ngIf="moveListPanelExpanded">
+      <div *ngFor="let move of pokemon.moves" class="type">
+        <p>{{move.move.name}}</p>
+      </div>
+    </div>
   </div>
-  
-  <!-- <div>
-    <accordion>
-      oi
-    </accordion>
-  </div> -->
-
 </div>
 
 <div class="Return">
