@@ -1,39 +1,31 @@
 <div class="search">
-    <form class="form-inline waves-light" mdbWavesEffect>
-      <div class="md-form mt-0">
-        <input id="search-box" type="text" placeholder="Search Pokemon">
-        <!-- <p>{{values}}</p> -->
-        <button class="search-button" (click)="onClickMe(name)">GO!</button>
-      </div>
-    </form>
-  </div>
-
-<!-- <app-pokemon-search></app-pokemon-search> -->
+  <!-- <form class="form-inline waves-light" mdbWavesEffect>
+      <select class="search-box">
+        <option>-Select Pokemon-</option>
+        <option *ngFor="let p of pokemonList.results ; let x = index" [routerLink]="['/pokemon-details', p.name]">
+          {{p.name}}
+        </option>
+      </select> -->
+    <!-- <div class="md-form mt-0">
+      <input id="name" class="search-box" placeholder="Type the name of pokemon....">
+      <button type="button" class="search-button" [routerLink]="['/pokemon-details', name]">GO!</button>
+    </div> -->
+  <!-- </form> -->
+</div>
 
 <div class="list">
   <div class="table" *ngIf="pokemonList">
-    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index" [routerLink]="['/pokemon-details', p.name]" >
+    <div class="cells" *ngFor="let p of pokemonList.results ; let x = index" [routerLink]="['/pokemon-details', p.name]">
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{x+1}}.png" alt="Sprite">
       <b>{{ p.name | uppercase}}</b>
 		</div>
   </div>
 </div>
 
-<div class="page-main">
+<!-- <div class="page-main">
   <div class="page-info">
     <ul>
       <li>1..2..3..4</li>
     </ul>
-    <!-- <b>PAGE: </b>
-    <select>
-      <option>--</option>
-      <option></option>
-    </select> -->
-    <!-- <b> of</b>  -->
-  </div>
-</div>
-<!-- <div *ngIf="pokemon" class="list-yeah">
-  <div *ngFor="let pokemon of pokemon">
-    <p>{{ pokemon.name | uppercase}}</p>
   </div>
 </div> -->

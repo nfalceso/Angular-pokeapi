@@ -1,21 +1,24 @@
+<!-- <div class="primary-details" *ngIf="pokemon">
+  <div class="previous" onclick="console.log(this.Id)"><b>PREVIOUS</b></div>
+  <div class="next"><b>NEXT</b></div>
+</div> -->
 
 <div class="primary-details" *ngIf="pokemon">
-  <div class="previous"></div>
-  <div class="next"></div>
   <!-- <div *ngFor="let p of Pokemon.results"> -->
     <table class="main">
       <tr>
-        <td class="picture">
-          <div class="sprite">
-              <!-- <div class="normal"> -->
+        <td class="picture" (click)="normalPanelExpanded = !normalPanelExpanded">
+          <div class="sprite" (click)="shinyPanelExpanded = !shinyPanelExpanded">
+              <div *ngIf="normalPanelExpanded">
                 <img src="{{pokemon.sprites.front_default != null && pokemon.sprites.front_default || default}}" alt="Sprite">
-              <!-- </div> -->
-              <!-- <div class="shiny">
+                <b>Normal</b>
+              </div>
+              <div *ngIf="shinyPanelExpanded">
                 <img src="{{pokemon.sprites.front_shiny != null && pokemon.sprites.front_shiny || default}}" alt="Sprite">
-              </div> -->
+                <b>Shiny</b>
+              </div>
           </div>
         </td>
-      <!-- </tr> -->
       <table class="primary-info">
       <tr>
         <td class="title">
@@ -72,14 +75,11 @@
   <div class="others" *ngIf="desc" (click)="additionalPanelExpanded = !additionalPanelExpanded">
   <div class="heading"><b>ADDITIONAL INFORMATION: (click to expand)</b></div>
     <div *ngIf="additionalPanelExpanded">
-      <!-- <accordion> -->
-      <p><b>Description:</b></p>
-      <p>{{desc.flavor_text_entries[1].flavor_text}}</p><br>
-      <p><b>Genus:</b> {{desc.genera[2].genus}}</p><br>
-      <p><b>Shape:</b> {{desc.shape.name}}</p><br>
-      <!-- <p *ngIf="desc.evolves_from_species.name != null"><b>Evolve's from:</b> {{desc.evolves_from_species.name}}</p> -->
+      <!-- <p><b>Description:</b></p>
+      <p>{{desc.flavor_text_entries.flavor_text}}</p><br> -->
+      <p><b>Genus:</b> {{desc.genera[2].genus}}</p>
+      <p><b>Shape:</b> {{desc.shape.name}}</p>
       <p><b>Habitat:</b> {{desc.habitat.name}}</p>
-      <!-- </accordion> -->
     </div>
   </div>
 </div>

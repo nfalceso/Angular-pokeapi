@@ -25,9 +25,13 @@ export class Service{
       return this.http.get<PokemonList>(`${this.URL}/pokemon?offset=0&limit=9999`);
     }
 
-    // getPage(){
+    getNextPokemon(na){
 
-    // }
+    }
+
+    getpreviousPokemon(){
+
+    }
     
     getDetails(name: string){
       return this.http.get<Pokemon>(`${this.URL}/pokemon/${name}`);

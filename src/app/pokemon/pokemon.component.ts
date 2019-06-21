@@ -23,6 +23,7 @@ export class PokemonComponent implements OnInit {
   sub: any;
   // id: string;
   pagedItems: any[];
+  default = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png";
 
   constructor(
     protected service: Service,
@@ -30,8 +31,6 @@ export class PokemonComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.sub = this.route.params.subscribe(params => { this.page = +params["page"];
-    // console.log("page: " + this.page)
     
     this.service.getAllPokemon()
     .subscribe((data: PokemonList) => console.log(this.pokemonList = {
@@ -41,6 +40,8 @@ export class PokemonComponent implements OnInit {
     }))
     
   }
+
+  // onClick(string: name){}
 
   // clickPage() {
   //   this.service.getOnlyPokemon(name)
